@@ -1,0 +1,7 @@
+{
+  "name": "bookme",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
