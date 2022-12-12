@@ -33,4 +33,5 @@ mysqli_stmt_execute($stmt);
 mysqli_stmt_close($stmt);
 
 $response = array("status" => 200);
-echo (json_encode($response));
+$final = array_merge($response, getuserinfo($connection, $username));
+echo (json_encode($final));
