@@ -54,3 +54,20 @@ if($_SERVER["REQUEST_METHOD"] == "GET" && !empty($_GET["category"])){
     echo(json_encode($properties));
     exit();
 }
+
+//if get request is sent with a country parameter we return all properties with that country
+if($_SERVER["REQUEST_METHOD"] == "GET" && !empty($_GET["country"])){
+    $country = $_GET["country"];
+    $sql = "SELECT * FROM properties WHERE country = ?";
+    $stmt = mysqli_stmt_init($connection);
+    mysqli_stmt_prepare($stmt, $sql);
+    mysqli_stmt_bind_param($stmt, "s", $country);
+    mysqli_stmt_execute($stmt);
+    $result = mysqli_stmt_get_result($stmt);
+    $properties = array();
+    while($row = mysqli_fetch_assoc($result)){
+        $properties[] = $row;
+    }
+    echo(json_encode($properties));
+    exit();
+}
