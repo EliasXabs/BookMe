@@ -25,3 +25,15 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     echo(json_encode($obj));
     exit();
 }
+
+// If get request is sent with no parameters we return all properties
+if($_SERVER["REQUEST_METHOD"] == "GET" && empty($_GET)){
+    $sql = "SELECT * FROM properties";
+    $result = mysqli_query($connection, $sql);
+    $properties = array();
+    while($row = mysqli_fetch_assoc($result)){
+        $properties[] = $row;
+    }
+    echo(json_encode($properties));
+    exit();
+}
