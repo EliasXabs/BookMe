@@ -19,6 +19,10 @@ const routes: Routes = [
     path: 'onboard1',
     loadChildren: () => import('./onboard1/onboard1.module').then( m => m.Onboard1PageModule)
   },
+  {
+    path: 'onboard2',
+    loadChildren: () => import('./onboard2/onboard2.module').then( m => m.Onboard2PageModule)
+  },
 ];
 
 @NgModule({
