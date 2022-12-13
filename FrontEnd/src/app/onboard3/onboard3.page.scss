@@ -19,13 +19,13 @@ ion-content{
     color: #000;
 }
 
-.contract{
-    margin-top: -5%;
+.handshake{
+    margin-top: 0%;
+    margin-bottom: -10%;
 }
 
 .onText{
     margin-top: 10%;
-    margin-bottom: 10%;
     font-family: "roboto-b";
 }
 
@@ -42,7 +42,7 @@ ion-content{
 }
 
 .progress{
-    margin-top: 15%;
+    margin-top: 10%;
     height: 5%;
     display: flex;
     justify-content: center;
@@ -54,7 +54,7 @@ ion-content{
     height: 100%;
     border-radius: 25px;
     --background: rgb(0,35,160);
-    --background: linear-gradient(90deg, rgba(0,35,160,1) 65%, rgba(34,34,34,1) 71%);
+
 }
 
 .next span{

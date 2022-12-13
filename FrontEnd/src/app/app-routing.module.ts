@@ -23,6 +23,10 @@ const routes: Routes = [
     path: 'onboard2',
     loadChildren: () => import('./onboard2/onboard2.module').then( m => m.Onboard2PageModule)
   },
+  {
+    path: 'onboard3',
+    loadChildren: () => import('./onboard3/onboard3.module').then( m => m.Onboard3PageModule)
+  },
 ];
 
 @NgModule({
