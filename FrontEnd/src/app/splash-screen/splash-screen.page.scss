@@ -1,0 +1,53 @@
+*{
+    background-color: white;
+    color: black;
+    padding: 0%;
+}
+ion-page{
+    background-color: white;
+    color: black;
+}
+
+ion-content{
+    --overflow: hidden;
+}
+
+.logo {
+    font-family: "eagle";
+    font-size: 280%;
+    font-weight: bold;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    padding-top: 8%;
+    background-color: white;
+    color: #000;
+}
+
+.slogan{
+    margin-top: 10%;
+    font-family: "roboto-b";
+}
+
+.slogan-t{
+    margin-top: -3%;
+    font-size: 170%;
+    text-align: center;
+    justify-content: center;
+    background-color: white;
+    color: #000;
+    display: flex;
+}
+.box{
+    padding-right: 130%;
+    padding-bottom: 50%;
+    width: 300%;
+    height: 140%;
+    transform: rotate(-25.68deg);
+}
+
+img{
+    width: 200%;
+    height: 80%;
+    object-fit: cover;
+}
