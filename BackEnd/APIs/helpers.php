@@ -68,3 +68,17 @@ function propertyExists($connection, $title){
     return mysqli_fetch_assoc($results);
 
 }
+
+function getpropertyid($connection, $title){
+    $sql = "SELECT id FROM properties WHERE title = ?";
+
+    $stmt = mysqli_stmt_init($connection);
+    mysqli_stmt_prepare($stmt, $sql);
+    mysqli_stmt_bind_param($stmt, "s", $title);
+    mysqli_stmt_execute($stmt);
+
+    $results = mysqli_stmt_get_result($stmt);
+    $row = mysqli_fetch_assoc($results);
+
+    return $row["id"];
+}

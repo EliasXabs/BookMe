@@ -2,21 +2,11 @@
 
 include("connection.php");
 
-// if post request is sent then favorite or unfavorite the property
+// if get request is sent with title and userid get the property with that title then favorite it with the user id
 if($_SERVER["REQUEST_METHOD"] == "POST" && !empty($_GET["title"]) && !empty($_GET["user_id"])){
     $title = $_POST["title"];
     $user_id = $_POST["user_id"];
-    $sql = "SELECT * FROM properties WHERE title = ?";
-    $stmt = mysqli_stmt_init($connection);
-    mysqli_stmt_prepare($stmt, $sql);
-    mysqli_stmt_bind_param($stmt, "s", $title);
-    mysqli_stmt_execute($stmt);
-    $result = mysqli_stmt_get_result($stmt);
-    $properties = array();
-    while($row = mysqli_fetch_assoc($result)){
-        $properties[] = $row;
-    }
-    $property_id = $properties[0]["id"];
+    $property_id = getpropertyid($connection, $title);
 
     //if the property is not already favorited by the user, favorite it
     $sql = "SELECT * FROM favorites WHERE property_id = ? AND user_id = ?";
