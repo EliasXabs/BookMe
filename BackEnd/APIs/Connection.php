@@ -38,6 +38,7 @@ $connection->query("CREATE TABLE IF NOT EXISTS users (
 // Property table
 $connection->query("CREATE TABLE IF NOT EXISTS properties (
     id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    title VARCHAR(10) NOT NULL,
     price INT(6) NOT NULL,
     pictures TEXT NOT NULL,
     country VARCHAR(30) NOT NULL,
