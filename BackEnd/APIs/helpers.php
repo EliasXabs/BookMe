@@ -54,3 +54,17 @@ function getuserinfo($connection, $username){
 
     return $user;
 }
+
+function propertyExists($connection, $title){
+    
+    $sql = "SELECT title FROM properties WHERE title = ?";
+    $stmt = mysqli_stmt_init($connection);
+    mysqli_stmt_prepare($stmt, $sql);
+    mysqli_stmt_bind_param($stmt, "s", $username);
+    mysqli_stmt_execute($stmt);
+
+    $results = mysqli_stmt_get_result($stmt);
+    
+    return mysqli_fetch_assoc($results);
+
+}

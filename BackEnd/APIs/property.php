@@ -5,12 +5,19 @@ include("connection.php");
 
 // If post request is sent we create a new property
 if($_SERVER["REQUEST_METHOD"] == "POST"){
+    $title = $_POST["title"];
     $price = $_POST["price"];
     $pictures = $_POST["pictures"];
     $country = $_POST["country"];
     $city = $_POST["city"];
     $category = $_POST["catetgory"];
     $user_id = $_POST["user_id"];
+
+    if (propertyExists($_POST, $title)) {
+        $obj = array("status" => 403, "message" => "Username already taken");
+        echo(json_encode($obj));
+        exit();
+    }
 
     $sql = "INSERT INTO properties(price, pictures, country, city, category, owner_id) VALUES (?, ?, ?, ?, ?, ?)";
 
