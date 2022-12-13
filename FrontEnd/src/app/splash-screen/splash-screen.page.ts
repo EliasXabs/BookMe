@@ -19,10 +19,10 @@ export class SplashScreenPage implements OnInit {
         view = "/home";
     }
     else {
-        view = "/onboard-1";
+        view = "/onboard1";
     }
     localStorage.setItem('pageDisplayed', "true");
-    
+
     setTimeout(() => {
       this.router.navigateByUrl(view);
     }, 5000);

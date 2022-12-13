@@ -15,6 +15,10 @@ const routes: Routes = [
     path: 'splash-screen',
     loadChildren: () => import('./splash-screen/splash-screen.module').then( m => m.SplashScreenPageModule)
   },
+  {
+    path: 'onboard1',
+    loadChildren: () => import('./onboard1/onboard1.module').then( m => m.Onboard1PageModule)
+  },
 ];
 
 @NgModule({
