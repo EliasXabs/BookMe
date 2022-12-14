@@ -1,0 +1,24 @@
+<ion-content>
+  <span class = "logo">Book Me</span>
+
+  <div class="userin">
+    <ion-item  counter="true">
+      <ion-label  position="floating">Username</ion-label>
+      <ion-input class="uin"(change)="checkusername()" [(ngModel)]="uinvalue" maxlength="10" [clearInput]="true" placeholder="Username"></ion-input>
+    </ion-item>
+  </div>
+
+  <div class="passin">
+    <ion-item  counter="true">
+      <ion-label position="floating">Password</ion-label>
+      <ion-input (change)="checkpass()" [(ngModel)]="pinvalue" type="password" maxlength="15" [clearInput]="true" placeholder="password"></ion-input>
+      <ion-note slot="helper" class="error" [hidden]="creds">Wrong Credentials</ion-note>
+    </ion-item>
+  </div>
+
+  <div class="signup">
+    <ion-button [class]="thebtn" [disabled]="signbtn" expand="block" (click)="login()">Log in</ion-button>
+    <ion-button class="login" fill="clear" routerLink="/signup">Don't have an account? Sign up now!</ion-button>
+  </div>
+
+</ion-content>

@@ -100,6 +100,7 @@ export class SignupPage implements OnInit {
       if (data["status"] == 200) {
         this.nameerror = true;
         this.emailerror = true;
+          localStorage.setItem('user_id', data["id"]);
           localStorage.setItem('username', data["username"]);
           localStorage.setItem('email', data["email"]);
           localStorage.setItem('pp', data["profile_picture"]);

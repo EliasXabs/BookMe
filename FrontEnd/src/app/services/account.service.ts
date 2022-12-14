@@ -17,4 +17,12 @@ export class AccountService {
     const response = this.http.post( baseurl + "signup.php", Data);
     return response;
   }
+
+  login(name:string, password:string){
+    let Data = new FormData();
+    Data.append('username', name);
+    Data.append('password', password);
+    const response = this.http.post( baseurl + "login.php", Data);
+    return response;
+  }
 }

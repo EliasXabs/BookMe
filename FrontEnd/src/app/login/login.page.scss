@@ -19,16 +19,11 @@ ion-content{
     background-color: white;
     color: #000;
 }
+
 .userin{
     background: #E6E6E6;
     border-radius: 10px;
-    margin: 5% 10% 0% 10%;
-}
-
-.emailin{
-    background: #E6E6E6;
-    border-radius: 10px;
-    margin: 5% 10% 0% 10%;
+    margin: 30% 10% 0% 10%;
 }
 
 .passin{
@@ -37,13 +32,8 @@ ion-content{
     margin: 10% 10% 0% 10%;
 }
 
-.passmatch{
-    background: #E6E6E6;
-    border-radius: 10px;
-    margin: 5% 10% 0% 10%;
-}
-.signup{
-    margin: 10% 10% 0% 10%;
+.error{
+    color: red;
 }
 
 ion-item{
@@ -63,6 +53,6 @@ ion-item{
     --background: rgb(0,35,160);
 }
 
-.error{
-    color: red;
+.signup{
+    margin: 10% 10% 0% 10%;
 }
