@@ -5,7 +5,7 @@
       <ion-label  position="floating">Username</ion-label>
       <ion-input class="uin" (change)="checkusername()" [(ngModel)]="uinvalue" maxlength="10"[clearInput]="true" placeholder="Username"></ion-input>
       <ion-note slot="helper" [hidden]="namehelp"> At least 3 characters</ion-note>
-      <ion-note slot="helper" [hidden]="nameerror">Username Already Taken</ion-note>
+      <ion-note slot="helper" class="error" [hidden]="nameerror">Username Already Taken</ion-note>
     </ion-item>
   </div>
 
@@ -14,7 +14,7 @@
       <ion-label  position="floating">Email</ion-label>
       <ion-input  [(ngModel)]="einvalue" (change)="checkemail()" type="email" maxlength="50"[clearInput]="true" placeholder="example@example.com"></ion-input>
       <ion-note slot="helper" [hidden]="emailhelp">Enter a valid email</ion-note>      
-      <ion-note slot="helper" [hidden]="emailerror">Email already exists</ion-note>
+      <ion-note slot="helper" class="error" [hidden]="emailerror">Email already exists</ion-note>
     </ion-item>
   </div>
 
@@ -37,6 +37,8 @@
 
 
   <div class="signup">
-    <ion-button class = "sign" [disabled]="signbtn" expand="block" (click)="signup()">Sign Up</ion-button>
+    <ion-button [class]="thebtn" [disabled]="signbtn" expand="block" (click)="signup()">Sign Up</ion-button>
+    <!-- already have an accounte? -->
+    <ion-button class="login" fill="clear" routerLink="/login">Already have an account? Login</ion-button>
   </div>
 </ion-content>

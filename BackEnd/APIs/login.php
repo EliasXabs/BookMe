@@ -3,8 +3,8 @@
 include("connection.php");
 include("helpers.php");
 
-$username = "Elias";
-$pass = "123456";
+$username = $_POST["username"];
+$pass = $_POST["password"];
 
 $hashedpass = md5($pass);
 

@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+
+import { AccountService } from '../services/account.service';
 
 @Component({
   selector: 'app-signup',
@@ -11,6 +14,7 @@ export class SignupPage implements OnInit {
   einvalue: any;
   pinvalue: any;
   cinvalue: any;
+  thebtn: any;
   namehelp: boolean = false;
   emailhelp: boolean = false;
   passhelp: boolean = false;
@@ -19,11 +23,11 @@ export class SignupPage implements OnInit {
   passmatch: boolean = true;
   signbtn: boolean = true;
 
-  constructor() { 
-
+  constructor(private service:AccountService, public router:Router) { 
   }
   
   ngOnInit() {
+    this.thebtn = "sign";
   }
   
   checkusername(){
@@ -81,6 +85,7 @@ export class SignupPage implements OnInit {
       this.passmatch == true
     ){
       this.signbtn = false;
+      this.thebtn = "signs";
     }
     else{
       this.signbtn = true;
@@ -88,6 +93,33 @@ export class SignupPage implements OnInit {
   }
 
   signup(){
-    
+    this.service.signup(this.uinvalue, this.einvalue, this.pinvalue).subscribe(response=> {
+        
+      let data = JSON.parse(JSON.stringify(response));
+
+      if (data["status"] == 200) {
+        this.nameerror = true;
+        this.emailerror = true;
+          localStorage.setItem('username', data["username"]);
+          localStorage.setItem('email', data["email"]);
+          localStorage.setItem('pp', data["profile_picture"]);
+          this.router.navigateByUrl("/home");
+      }
+      else if (data["status"] == 403) {
+          if (data["message"] == "username") {
+            this.emailerror = true;
+            this.nameerror = false;
+          }
+          else if (data["message"] == "email"){
+            this.nameerror = true;
+            this.emailerror = false;
+          }
+      }
+      else {
+        this.emailerror = true;
+        this.nameerror = true;
+          alert("Something went wrong");
+      }
+    });
   }
 }

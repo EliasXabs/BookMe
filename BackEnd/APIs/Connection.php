@@ -1,5 +1,9 @@
 <?php
 
+header('Access-Control-Allow-Origin: *');
+header('Access-Control-Allow-Methods: GET, POST');
+header("Access-Control-Allow-Headers: content-type");
+
 $db_host = "localhost";
 $db_user = "root";
 $db_pass = null;
@@ -17,7 +21,7 @@ try {
 } catch (\Throwable $th) {
     $sql = 'CREATE DATABASE ' . $db_name;
     if ($connection->query($sql)) {
-        echo "Database my_db created successfully\n";
+        echo "Database created successfully\n";
     } else {
         echo 'Error creating database: ' . mysql_error() . "\n";
     }
