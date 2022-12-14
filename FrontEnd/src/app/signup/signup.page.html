@@ -1,0 +1,42 @@
+<ion-content>
+  <span class = "logo">Book Me</span>
+  <div class="userin">
+    <ion-item  counter="true">
+      <ion-label  position="floating">Username</ion-label>
+      <ion-input class="uin" (change)="checkusername()" [(ngModel)]="uinvalue" maxlength="10"[clearInput]="true" placeholder="Username"></ion-input>
+      <ion-note slot="helper"> At least 3 characters</ion-note>
+      <ion-note slot="error">Username already Taken!</ion-note>
+    </ion-item>
+  </div>
+
+  <div class="emailin">
+    <ion-item  counter="true">
+      <ion-label  position="floating">Email</ion-label>
+      <ion-input  type="email" maxlength="50"[clearInput]="true" placeholder="example@example.com"></ion-input>
+      <ion-note slot="error">Email already exists</ion-note>
+    </ion-item>
+  </div>
+
+  <div class="passin">
+    <ion-item  counter="true">
+      <ion-label  position="floating">Password</ion-label>
+      <ion-input  type="password" maxlength="15" [clearInput]="true" placeholder="password"></ion-input>
+      <ion-note slot="helper">At least 6 characters</ion-note>
+      <ion-note slot="error">Enter a valid password</ion-note>
+    </ion-item>
+  </div>
+
+  <div class="passmatch">
+    <ion-item  counter="true">
+      <ion-label  position="floating">Confirm password</ion-label>
+      <ion-input  type="password" minlength="6" maxlength="15" [clearInput]="true" placeholder="password"></ion-input>
+      <ion-note slot="helper"> At least 6 characters</ion-note>
+      <ion-note slot="error">Enter a valid password</ion-note>
+    </ion-item>
+  </div>
+
+
+  <div class="signup">
+    <ion-button class = "sign" [disabled]="true" expand="block" (click)="signup()">Sign Up</ion-button>
+  </div>
+</ion-content>

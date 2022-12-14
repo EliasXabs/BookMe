@@ -1,0 +1,64 @@
+ion-content{
+    font-family: "roboto-b";
+    background-color: white;
+    color: black;
+    --overflow: hidden;
+    padding:0%;
+    margin: 0%;
+}
+
+.logo {
+    font-family: "eagle";
+    margin: 0%;
+    font-size: 280%;
+    font-weight: bold;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    padding-top: 8%;
+    background-color: white;
+    color: #000;
+}
+.userin{
+    background: #E6E6E6;
+    border-radius: 10px;
+    margin: 5% 10% 0% 10%;
+}
+
+.emailin{
+    background: #E6E6E6;
+    border-radius: 10px;
+    margin: 5% 10% 0% 10%;
+}
+
+.passin{
+    background: #E6E6E6;
+    border-radius: 10px;
+    margin: 10% 10% 0% 10%;
+}
+
+.passmatch{
+    background: #E6E6E6;
+    border-radius: 10px;
+    margin: 5% 10% 0% 10%;
+}
+.signup{
+    margin: 10% 10% 0% 10%;
+}
+
+ion-item{
+    --border-radius: 10px;
+    --background: #E6E6E6;
+    --color: #000;
+    --border-color: #000;
+}
+
+.sign{
+    font-family: "roboto-b";
+    --background: black;
+}
+
+.signs{
+    font-family: "roboto-b";
+    --background: rgb(0,35,160);
+}

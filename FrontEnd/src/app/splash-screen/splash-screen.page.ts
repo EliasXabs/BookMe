@@ -13,6 +13,7 @@ export class SplashScreenPage implements OnInit {
   }
 
   ngOnInit() {
+    localStorage.clear();
     let view: string | UrlTree;
     const checkView = localStorage.getItem('pageDisplayed');
     if (checkView == "true") {
@@ -27,5 +28,4 @@ export class SplashScreenPage implements OnInit {
       this.router.navigateByUrl(view);
     }, 5000);
   }
-
 }

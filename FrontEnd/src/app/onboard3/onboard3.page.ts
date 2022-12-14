@@ -15,6 +15,6 @@ export class Onboard3Page implements OnInit {
   }
 
   nextpage(){
-    this.router.navigateByUrl("/onboard3");
+    this.router.navigateByUrl("/signup");
   }
 }

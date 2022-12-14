@@ -28,7 +28,7 @@ $connection->select_db($db_name);
 // User table
 $connection->query("CREATE TABLE IF NOT EXISTS users (
     id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-    username VARCHAR(30) NOT NULL,
+    username VARCHAR(10) NOT NULL,
     password TEXT NOT NULL,
     email VARCHAR(50) NOT NULL,
     profile_picture TEXT NOT NULL,

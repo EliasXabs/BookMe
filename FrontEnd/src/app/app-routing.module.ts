@@ -27,6 +27,10 @@ const routes: Routes = [
     path: 'onboard3',
     loadChildren: () => import('./onboard3/onboard3.module').then( m => m.Onboard3PageModule)
   },
+  {
+    path: 'signup',
+    loadChildren: () => import('./signup/signup.module').then( m => m.SignupPageModule)
+  },
 ];
 
 @NgModule({
