@@ -13,30 +13,58 @@
 
 <ion-content>
   <div class="body">
-    
-  </div>
+    <div class="searchbar">
+      <ion-searchbar animated="true" placeholder="Search" style="color: black;"></ion-searchbar>
+    </div>
 
-  <div class="footer">
-    <ion-footer>
-      <ion-toolbar>
-        <ion-title>
-          <div class="foot">
-            <a href="/home">
-              <ion-icon routerlink="/home" name="home-outline"></ion-icon>
-            </a>
-            <a href="/post-house">
-              <ion-icon name="add-circle"></ion-icon>
-            </a>
-            <a href="/books">
-              <ion-icon name="bookmarks-outline"></ion-icon>
-            </a>
-            <a href ="/stars">
-              <ion-icon name="star-outline"></ion-icon>
-            </a>
+    <div class="categories" >
+        <div class="block" style="color: black">
+            <ion-icon name="home-outline"></ion-icon>
+            <h5>Home</h5> 
+        </div>
+
+        <div class="block" style="color: black">
+          <div>
+            <img src="/assets/res/Bungalow.png">
+            <h5>Bungalow</h5> 
           </div>
-        </ion-title>
-      </ion-toolbar>
-    </ion-footer>
+      </div>
+    </div>
+
+    <div class="properties">
+      <ion-card-content>
+        <ion-list>
+          <ion-item *ngFor="let property of properties">
+            <ion-thumbnail slot="start">
+              <img alt="Silhouette of mountains" src={{property.image}} style="border-radius:25px;" />
+            </ion-thumbnail>
+            <ion-label>{{property.title}}</ion-label>
+            <ion-label>{{property.country}}</ion-label>
+            <ion-label>{{property.price}}</ion-label>
+          </ion-item>
+        </ion-list>
+      </ion-card-content>
+    </div>
   </div>
 </ion-content>
 
+<ion-footer>
+  <ion-toolbar>
+    <ion-title>
+      <div class="foot">
+        <a href="/home">
+          <ion-icon routerlink="/home" name="home-outline"></ion-icon>
+        </a>
+        <a href="/post-house">
+          <ion-icon name="add-circle"></ion-icon>
+        </a>
+        <a href="/books">
+          <ion-icon name="bookmarks-outline"></ion-icon>
+        </a>
+        <a href ="/stars">
+          <ion-icon name="star-outline"></ion-icon>
+        </a>
+      </div>
+    </ion-title>
+  </ion-toolbar>
+</ion-footer>

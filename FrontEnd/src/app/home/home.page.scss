@@ -87,3 +87,47 @@ ion-content .imgin{
   font-family: "roboto-b";
   font-size: 200%;
 }
+
+.searchbar{
+  background-color: #E6E6E6;
+  margin: 5%;
+  border-radius: 25px;
+}
+
+.properties ion-card-title{
+  background: white;
+  color: black;
+}
+
+.properties ion-item{
+  --background: white;
+  --color: black;
+}
+
+.categories{
+  margin-left: 5%;
+  margin-right: 5%;
+  color: black;
+  display: flex;
+}
+
+.block{
+  margin-right: 5%;
+  width: 25%;
+  background: #E6E6E6;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  border-radius: 10px;
+}
+
+.block img{
+  width: 25%;
+  height: 25%;
+  display: flex;
+  
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  margin-bottom: -15%;
+}
