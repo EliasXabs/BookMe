@@ -1,27 +1,89 @@
-#container {
-  text-align: center;
+ion-content{
+  font-family: "roboto-b";
+  background-color: white;
+  color: black;
+  --overflow: hidden;
+  padding:0%;
+  margin: 0%;
 
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
 }
 
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
+.body {
+  min-height: 85vh;
 }
 
-#container p {
-  font-size: 16px;
-  line-height: 22px;
 
-  color: #8c8c8c;
-
-  margin: 0;
+.head{
+  display: flex;
+  width: 100%;
+  padding: 0% -50 0% -50%;
 }
 
-#container a {
-  text-decoration: none;
+ion-title{
+  padding: 0%;
+}
+
+ion-toolbar{
+  font-family: "roboto-b";
+  --background: white;
+  color: black;
+  --overflow: hidden;
+  padding:0%;
+  margin: 0%;
+}
+
+ion-title span{
+  margin-left: 5%;
+  justify-content: left;
+  font-family: "roboto-b";
+  font-size: 200%;
+}
+
+.pp {
+  display: contents;
+  justify-content: right;
+  
+  width: 40%;
+  height: 40%;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  margin-left: 40%;
+  margin-top: 2%;
+}
+
+ion-header img{
+  width: 70%;
+  height: 70%;
+  border-radius: 25px;
+}
+
+ion-content .imgin{
+  background: #E6E6E6;
+  margin: 10% 10% 0% 10%;
+  border: 2px solid #000000;
+  border-radius: 10px;
+  width: 80%;
+  height: 15%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.foot {
+  --margin-top: auto;
+  display: flex;
+  width: 100%;
+  padding: 0% -50% 0% -50%;
+}
+
+.foot a{
+  color: #000000;
+  margin-top: 3%;
+  margin-left: 13%;
+  justify-content: left;
+  font-family: "roboto-b";
+  font-size: 200%;
 }

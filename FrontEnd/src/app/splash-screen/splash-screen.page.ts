@@ -17,7 +17,7 @@ export class SplashScreenPage implements OnInit {
     let view: string | UrlTree;
     const checkView = localStorage.getItem('pageDisplayed');
     if (checkView == "true") {
-        view = "/home";
+        view = "/login";
     }
     else {
         view = "/onboard1";

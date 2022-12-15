@@ -7,6 +7,11 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
+  profile: any ;
+
   constructor() {}
   
+  ngoninit() {
+    this.profile = "data:image/png;base64,"+ localStorage.getItem('pp');
+  }
 }

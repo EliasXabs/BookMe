@@ -7,9 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BooksPage implements OnInit {
 
+  profile: any ;
+
   constructor() { }
 
   ngOnInit() {
+    this.profile = "data:image/png;base64,"+ localStorage.getItem('pp');
   }
 
 }

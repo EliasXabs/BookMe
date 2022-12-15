@@ -1,9 +1,41 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>stars</ion-title>
+    <ion-title>
+      <div class = "head">
+        <span style="font-family: eagle ;">BookMe</span>
+        <div class="pp">
+          <a href="/profile"><img [src]="profile"></a>
+        </div>
+      </div>
+    </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+  <div class="body">
+    
+  </div>
 
+  <div class="footer">
+    <ion-footer>
+      <ion-toolbar>
+        <ion-title>
+          <div class="foot">
+            <a href="/home">
+              <ion-icon routerlink="/home" name="home-outline"></ion-icon>
+            </a>
+            <a href="/post-house">
+              <ion-icon name="add-circle"></ion-icon>
+            </a>
+            <a href="/books">
+              <ion-icon name="bookmarks-outline"></ion-icon>
+            </a>
+            <a href ="/stars">
+              <ion-icon name="star-outline"></ion-icon>
+            </a>
+          </div>
+        </ion-title>
+      </ion-toolbar>
+    </ion-footer>
+  </div>
 </ion-content>
