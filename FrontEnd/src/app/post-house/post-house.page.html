@@ -1,0 +1,86 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      <div class = "head">
+        <span>Post</span>
+        <div class="pp">
+          <a href="/profile"><img [src]="profile"></a>
+        </div>
+      </div>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="titlein">
+    <ion-item  counter="true">
+      <ion-label  position="floating">Title</ion-label>
+      <ion-input class="tin" (change)="checktitle()" [(ngModel)]="tinvalue" maxlength="20" [clearInput]="true" placeholder="Title"></ion-input>
+      <ion-note slot="helper" [hidden]="titlehelp"> At least 3 characters</ion-note>
+      <ion-note slot="helper" class="error" [hidden]="titleerror">Title already Taken</ion-note>
+    </ion-item>
+  </div>
+
+  <div class="imgin">
+    <ion-item class="imgin1">
+      <input (change)="convertimg()" id = "file" accept="image/png, image/jpeg" class="filein" type="file">
+    </ion-item>
+  </div>
+  
+  <div class="countryin">
+    <ion-item>
+      <ion-select interface="action-sheet" placeholder="Country" [(ngModel)]="country">
+        <ion-select-option value="lebanon">Lebanon</ion-select-option>
+        <ion-select-option value="usa">USA</ion-select-option>
+        <ion-select-option value="united-kingdom">United-Kingdom</ion-select-option>
+        <ion-select-option value="saudi-arabia">Saudi Arabia</ion-select-option>
+      </ion-select>
+    </ion-item>
+  </div>
+
+  <div class="typein">
+    <ion-item>
+      <ion-select interface="action-sheet" placeholder="Type" [(ngModel)]="type">
+        <ion-select-option value="villa">Villa</ion-select-option>
+        <ion-select-option value="appartment">Appartment</ion-select-option>
+        <ion-select-option value="Penthouse">penthouse</ion-select-option>
+        <ion-select-option value="bungalow">Bungalow</ion-select-option>
+      </ion-select>
+    </ion-item>
+  </div>
+
+  <div class="pricein">
+    <ion-item  counter="true">
+      <ion-label  position="floating">Price</ion-label>
+      <ion-input class="pin" (change)="checkprice()" [(ngModel)]="pinvalue" maxlength="20" [clearInput]="true" placeholder="Title"></ion-input>
+      <ion-note slot="helper" [hidden]="priceerror" class = "error">Please enter an integer</ion-note>
+    </ion-item>
+  </div>
+
+  <div class="post">
+    <ion-button [class]="postbtn" [disabled]="postinbtn" expand="block" (click)="post()">POST</ion-button>
+  </div>
+
+  <div class="footer">
+    <ion-footer>
+      <ion-toolbar>
+        <ion-title>
+          <div class="foot">
+            <a href="/home">
+              <ion-icon routerlink="/home" name="home-outline"></ion-icon>
+            </a>
+            <a href="post-house">
+              <ion-icon name="add-circle"></ion-icon>
+            </a>
+            <a href="books">
+              <ion-icon name="bookmarks-outline"></ion-icon>
+            </a>
+            <a href ="stars">
+              <ion-icon name="star-outline"></ion-icon>
+            </a>
+          </div>
+        </ion-title>
+      </ion-toolbar>
+    </ion-footer>
+  </div>
+</ion-content>
