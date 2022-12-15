@@ -1,9 +1,38 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>profile</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content>
+  <div class="back">
+    <ion-header>
+      <ion-toolbar>
+        <ion-buttons slot="start">
+          <ion-back-button defaultHref="/home"></ion-back-button>
+        </ion-buttons>
+        <ion-title>Profile</ion-title>
+      </ion-toolbar>
+    </ion-header>
+  </div>
 
+  <div class="body">
+    <div class="profile">
+      <ion-avatar>
+        <img [src]="profile">
+      </ion-avatar>
+      <div class="name">
+        <h1>{{name}}</h1>
+      </div>
+    </div>
+  </div>
+
+  <div class="favorites">
+    <ion-card-content>
+      <ion-card-title>Posted</ion-card-title>
+      <ion-list>
+        <ion-item *ngFor="let favorite of favorites">
+          <ion-thumbnail slot="start">
+            <img alt="Silhouette of mountains" src={{favorite.image}} />
+          </ion-thumbnail>
+          <ion-label>{{favorite.title}}</ion-label>
+          <ion-button fill="clear" ><ion-icon name="remove-circle-outline"></ion-icon></ion-button>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </div>
 </ion-content>

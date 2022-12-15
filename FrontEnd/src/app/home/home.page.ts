@@ -9,9 +9,10 @@ export class HomePage {
 
   profile: any ;
 
-  constructor() {}
+  constructor() {
+    this.profile = "data:image/png;base64,"+ localStorage.getItem('pp');
+  }
   
   ngoninit() {
-    this.profile = "data:image/png;base64,"+ localStorage.getItem('pp');
   }
 }

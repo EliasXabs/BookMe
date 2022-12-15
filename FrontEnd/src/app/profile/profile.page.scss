@@ -1,0 +1,43 @@
+ion-toolbar{
+    --background: #fff;
+    color: black;
+    font-family: "roboto-b";
+    font-weight: 300%;
+}
+
+
+.back ion-title{
+    font-family: "roboto-b";
+    font-weight: 300%;
+    font-size: 200%;
+}
+
+.body{
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.body ion-avatar{
+    margin-top: 15%;
+    width: 100%;
+    height: 100%;
+}
+
+.name{
+    font-family: "roboto-b";
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.favorites ion-card-title{
+    background: white;
+    color: black;
+}
+
+.favorites ion-item{
+    --background: white;
+    --color: black;
+}

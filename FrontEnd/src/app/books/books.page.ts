@@ -9,10 +9,11 @@ export class BooksPage implements OnInit {
 
   profile: any ;
 
-  constructor() { }
+  constructor() { 
+    this.profile = "data:image/png;base64,"+ localStorage.getItem('pp');
+  }
 
   ngOnInit() {
-    this.profile = "data:image/png;base64,"+ localStorage.getItem('pp');
   }
 
 }
