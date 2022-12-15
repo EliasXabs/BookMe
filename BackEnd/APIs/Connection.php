@@ -2,7 +2,7 @@
 
 header('Access-Control-Allow-Origin: *');
 header('Access-Control-Allow-Methods: GET, POST');
-header("Access-Control-Allow-Headers: content-type");
+header("Access-Control-Allow-Headers: *");
 
 $db_host = "localhost";
 $db_user = "root";
@@ -42,8 +42,8 @@ $connection->query("CREATE TABLE IF NOT EXISTS users (
 // Property table
 $connection->query("CREATE TABLE IF NOT EXISTS properties (
     id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-    title VARCHAR(10) NOT NULL,
-    price INT(6) NOT NULL,
+    title VARCHAR(20) NOT NULL,
+    price INT(20) NOT NULL,
     pictures TEXT NOT NULL,
     country VARCHAR(30) NOT NULL,
     city VARCHAR(30) NOT NULL,
